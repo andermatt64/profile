@@ -10,7 +10,7 @@ oobe\bypassnro
 ### Debloating
 Default Windows 11 Pro install is extremely bloated with a lot of extraneous features that are more distracting than necessary.
 
-[https://github.com/Raphire/Win11Debloat](Win11Debloat)
+[Win11Debloat](https://github.com/Raphire/Win11Debloat)
 
 ### Automated Installation
 > **NOTE**: To enable PowerShell scripts, run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` 
@@ -24,7 +24,7 @@ Run the following command to install required packages, remove unnecessary ones 
 ### Manual Installation
 Unfortunately, not all steps in this procedure are automatable via PowerShell. There are some steps that need manual action
 
-#### Minimum [https://www.nerdfonts.com/font-downloads](Nerd Fonts) Install Base
+#### Minimum [Nerd Fonts](https://www.nerdfonts.com/font-downloads) Install Base
 * FireCode Nerd Font
 * JetBrainsMono Nerd Font
 * MesloLG Nerd Font
@@ -45,7 +45,7 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 | _Padding_      |                            8 |
 
 ##### Preferred Color Scheme
-[https://gogh-co.github.io/Gogh](Spring by Gogh)
+[**Spring by Gogh**](https://gogh-co.github.io/Gogh)
 ```json
         {
             "background": "#0A1E24",
