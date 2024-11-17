@@ -47,29 +47,29 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 **Preferred Color Scheme**
 [_Spring by Gogh_](https://gogh-co.github.io/Gogh)
 ```json
-        {
-            "background": "#0A1E24",
-            "black": "#000000",
-            "blue": "#1DD3EE",
-            "brightBlack": "#000000",
-            "brightBlue": "#15A9FD",
-            "brightCyan": "#3E999F",
-            "brightGreen": "#1FC231",
-            "brightPurple": "#8959A8",
-            "brightRed": "#FF0021",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#D5B807",
-            "cursorColor": "#ECF0C1",
-            "cyan": "#3E999F",
-            "foreground": "#ECF0C1",
-            "green": "#1F8C3B",
-            "name": "Spring",
-            "purple": "#8959A8",
-            "red": "#FF4D83",
-            "selectionBackground": "#FFFFFF",
-            "white": "#FFFFFF",
-            "yellow": "#1FC95B"
-        }
+{
+    "background": "#0A1E24",
+    "black": "#000000",
+    "blue": "#1DD3EE",
+    "brightBlack": "#000000",
+    "brightBlue": "#15A9FD",
+    "brightCyan": "#3E999F",
+    "brightGreen": "#1FC231",
+    "brightPurple": "#8959A8",
+    "brightRed": "#FF0021",
+    "brightWhite": "#FFFFFF",
+    "brightYellow": "#D5B807",
+    "cursorColor": "#ECF0C1",
+    "cyan": "#3E999F",
+    "foreground": "#ECF0C1",
+    "green": "#1F8C3B",
+    "name": "Spring",
+    "purple": "#8959A8",
+    "red": "#FF4D83",
+    "selectionBackground": "#FFFFFF",
+    "white": "#FFFFFF",
+    "yellow": "#1FC95B"
+}
 ```
 
 #### Rust Development Environment
