@@ -6,18 +6,20 @@ To enable local account creation, run <kbd>Shift</kbd> + <kbd>F10</kbd> during t
 ```pwsh
 oobe\bypassnro
 ```
-
 ## Post-Installation
 ### Debloating
 Default Windows 11 Pro install is extremely bloated with a lot of extraneous features that are more distracting than necessary.
 
 [https://github.com/Raphire/Win11Debloat](Win11Debloat)
 
-### Optional Uninstalls
-* `Microsoft.OneDrive`
-
 ### Automated Installation
-> NOTE: 
+> **NOTE**: To enable PowerShell scripts, run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` 
+
+Run the following command to install required packages, remove unnecessary ones default _Win11Debloat_ ignored, and setup Helix/PowerShell configuration.
+
+```powershell
+.\Profile.ps1
+```
 
 ### Manual Installation
 Unfortunately, not all steps in this procedure are automatable via PowerShell. There are some steps that need manual action
@@ -36,13 +38,14 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 #### Windows Terminal Settings
 | Setting Name | Setting Value                |
 | ------------ | ---------------------------- |
-| Color Scheme | Spring                       |
+| Color Scheme |                       Spring |
 | Font Family  | JetBrainsMono Nerd Font Mono |
-| Font Size    | 9                            |
-| Opacity      | 90                           |
-| Padding      | 8                            |
+| Font Size    |                            9 |
+| Opacity      |                           90 |
+| Padding      |                            8 |
 
-##### Preferred Color Scheme (Spring by Gogh)
+##### Preferred Color Scheme
+**[https://gogh-co.github.io/Gogh/](Spring by Gogh)**
 ```json
         {
             "background": "#0A1E24",
@@ -70,13 +73,17 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 ```
 
 #### Rust Development Environment
-TODO
+```powershell
+rustup default stable
+rustup component add rust-analyzer
+```
 
 #### Golang Development Environment
-TODO
+```powershell
+go install golang.org/x/tools/gopls@latest
+go install github.com/nametake/golangci-lint-langserver@latest
+```
 
 #### Ghidra Environment Setup
 TODO
 
-#### MacOS-like "Natural Scrolling" for mouse scrollwheel
-TODO
