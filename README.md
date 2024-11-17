@@ -44,8 +44,8 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 | _Opacity_      |                           90 |
 | _Padding_      |                            8 |
 
-##### Preferred Color Scheme
-[**Spring by Gogh**](https://gogh-co.github.io/Gogh)
+**Preferred Color Scheme**
+[_Spring by Gogh_](https://gogh-co.github.io/Gogh)
 ```json
         {
             "background": "#0A1E24",
