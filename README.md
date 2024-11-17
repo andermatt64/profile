@@ -36,13 +36,13 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 * Ghidra
 
 #### Windows Terminal Settings
-| Setting Name | Setting Value                |
-| ------------ | ---------------------------- |
-| Color Scheme |                       Spring |
-| Font Family  | JetBrainsMono Nerd Font Mono |
-| Font Size    |                            9 |
-| Opacity      |                           90 |
-| Padding      |                            8 |
+| Setting Name   | Setting Value                |
+| :---           |                         ---: |
+| _Color Scheme_ |                       Spring |
+| _Font Family_  | JetBrainsMono Nerd Font Mono |
+| _Font Size_    |                            9 |
+| _Opacity_      |                           90 |
+| _Padding_      |                            8 |
 
 ##### Preferred Color Scheme
 **[https://gogh-co.github.io/Gogh/](Spring by Gogh)**
