@@ -76,6 +76,8 @@ Install-Packages @(
     "Starship.Starship"
     
     "M2Team.NanaZip"
+    "dbeaver.dbeaver"
+    "OpenStreetMap.Josm"
 )
 Install-HelixConfiguration
 Install-PowerShellProfile
