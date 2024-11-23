@@ -1,5 +1,6 @@
 function Install-PowerShellProfile {
     $cwd = Get-Location
+    New-Item -ItemType File -Path "$profile" -Force | Out-Null
     Copy-Item -Path "$cwd\Terminal\Microsoft.PowerShell_profile.ps1" -Destination "$profile"
 }
 
@@ -22,7 +23,10 @@ function Install-Packages {
 
 function Install-HelixConfiguration {
     $cwd = Get-Location
-    Copy-Item -Path "$cwd\Helix\config.toml" -Destination "$env:AppData\helix\config.toml"
+    $helixConfPath = "$env:AppData\helix\config.toml"
+    
+    New-Item -ItemType File -Path "$helixConfPath" -Force | Out-Null
+    Copy-Item -Path "$cwd\Helix\config.toml" -Destination "$helixConfPath"
 }
 
 function Uninstall-Packages {
@@ -49,6 +53,9 @@ Uninstall-Packages @(
     "MSIX\Microsoft.GetHelp_10.2409.22951.0_x64__8wekyb3d8bbwe"
     "MSIX\microsoft.windowscommunicationsapps_16005.14326.22096.0_x64__8wekyb3d8bbwe"
     "MSIX\Microsoft.People_10.2202.100.0_x64__8wekyb3d8bbwe"
+    "MSIX\microsoft.windowscommunicationsapps_16005.11629.20316.0_x64__8wekyb3d8bbwe"
+    "MSIX\Microsoft.People_10.1902.633.0_x64__8wekyb3d8bbwe"
+    "MSIX\Microsoft.OutlookForWindows_1.2024.1023.300_x64__8wekyb3d8bbwe"
 )
 
 Install-Packages @(
@@ -56,14 +63,23 @@ Install-Packages @(
     "Golang.Go"
     "Amazon.Corretto.21.JDK"
     "Rustlang.Rustup"
-    "Zig.zig"
-    "Zigtools.zls"
+    "zig.zig"
+    "zigtools.zls"
+    "LLVM.clangd"
 
     "WerWolv.ImHex"
     "Microsoft.WinDbg"
     "dnSpyEx.dnSpy"
 
-    "tamasft.taplo"
+    "Microsoft.Sysinternals.Autoruns"
+    "Microsoft.Sysinternals.FindLinks"
+    "Microsoft.Sysinternals.ProcessExplorer"
+    "Microsoft.Sysinternals.ProcessMonitor"
+    "Microsoft.Sysinternals.Strings"
+    "Microsoft.Sysinternals.TCPView"
+    "Microsoft.Sysinternals.Sigcheck"
+
+    "tamasfe.taplo"
     "BurntSushi.ripgrep.MSVC"
     "sharkdp.hexyl"
     "sharkdp.pastel"
