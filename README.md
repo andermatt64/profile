@@ -25,9 +25,15 @@ Run the following command to install required packages, remove unnecessary ones 
 Unfortunately, not all steps in this procedure are automatable via PowerShell. There are some steps that need manual action
 
 #### Minimum [Nerd Fonts](https://www.nerdfonts.com/font-downloads) Install Base
-* FireCode Nerd Font
+* FiraCode Nerd Font
 * JetBrainsMono Nerd Font
 * MesloLG Nerd Font
+
+#### Other Fonts (Google Fonts)
+* B612
+* B612 Mono
+* Ubuntu
+* Questrial
 
 #### Non-winget Applications
 * Mozilla Firefox Stable
