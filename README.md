@@ -72,6 +72,9 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 }
 ```
 
+#### Use 24-hour clock format
+In **Settings** &rarr; **Time & language** &rarr; **Regional format**, make **Short time** and **Long time** reflect the desired 24-hour format.
+
 #### Rust Development Environment
 ```powershell
 rustup default stable
