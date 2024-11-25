@@ -21,27 +21,27 @@ Run the following command to install required packages, remove unnecessary ones 
 .\Profile.ps1
 ```
 
-### Manual Installation
+## Manual Installation
 Unfortunately, not all steps in this procedure are automatable via PowerShell. There are some steps that need manual action
 
-#### Minimum [Nerd Fonts](https://www.nerdfonts.com/font-downloads) Install Base
+### Minimum [Nerd Fonts](https://www.nerdfonts.com/font-downloads) Install Base
 * FiraCode Nerd Font
 * JetBrainsMono Nerd Font
 * MesloLG Nerd Font
 
-#### Other Fonts (Google Fonts)
+### Other Fonts (Google Fonts)
 * B612
 * B612 Mono
 * Ubuntu
 * Questrial
 
-#### Non-winget Applications
+### Non-winget Applications
 * Mozilla Firefox Stable
 * Visual Studio Community
   * Include _Git for Windows_
 * Ghidra
 
-#### Windows Terminal Settings
+### Windows Terminal Settings
 | Setting Name   | Setting Value                |
 | :---           |                         ---: |
 | _Color Scheme_ |                       Spring |
@@ -78,25 +78,25 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 }
 ```
 
-#### Use 24-hour clock format
+### Use 24-hour clock format
 In **Settings** &rarr; **Time & language** &rarr; **Regional format**, make **Short time** and **Long time** reflect the desired 24-hour format.
 
-#### Disable Edge from running in the background when closed
+### Disable Edge from running in the background when closed
 In _Microsoft Edge_, go into **Settings** &rarr; **System and performacne* and make sure **Startup boost** and **Continue running background extensionms and apps when Microsoft Edge is closed** are disabled.
 
-#### Rust Development Environment
+### Rust Development Environment
 ```powershell
 rustup default stable
 rustup component add rust-analyzer
 ```
 
-#### Golang Development Environment
+### Golang Development Environment
 ```powershell
 go install golang.org/x/tools/gopls@latest
 go install github.com/nametake/golangci-lint-langserver@latest
 ```
 
-#### Ghidra Environment Setup
+### Ghidra Environment Setup
 In the **Function Graph** window, click **Edit Code Layout** button. In the opened dialog, click the **Instruction/Data** tab and resize the bars to make sure no text is hidden.
 
 In **Edit** &rarr; **Tool Options**, make the following changes:
