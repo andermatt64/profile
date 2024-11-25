@@ -81,6 +81,9 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 #### Use 24-hour clock format
 In **Settings** &rarr; **Time & language** &rarr; **Regional format**, make **Short time** and **Long time** reflect the desired 24-hour format.
 
+#### Disable Edge from running in the background when closed
+In _Microsoft Edge_, go into **Settings** &rarr; **System and performacne* and make sure **Startup boost** and **Continue running background extensionms and apps when Microsoft Edge is closed** are disabled.
+
 #### Rust Development Environment
 ```powershell
 rustup default stable
@@ -94,5 +97,28 @@ go install github.com/nametake/golangci-lint-langserver@latest
 ```
 
 #### Ghidra Environment Setup
-TODO
+In the **Function Graph** window, click **Edit Code Layout** button. In the opened dialog, click the **Instruction/Data** tab and resize the bars to make sure no text is hidden.
 
+In **Edit** &rarr; **Tool Options**, make the following changes:
+* **Options**
+  * **Decompiler**
+    * **Display**
+      * Change **Font** to _JetBrainsMonoNL NFM_
+      * Enable **Display EOL comments**
+      * Set **Display Namespaces** to _Always_
+  * **Listing Display**
+    * Change **Font** to _JetBrainsMonoNL NFM_
+  * **Graph**
+    * **Function Graph**
+      * Set **Graph Background Color** to _#F2FFFF_
+      * Enable **Scroll Wheel Pans**
+      * Set **View Settings** to _Start Fully Zoomed In_
+      * **Nested Code Layout**
+        * Enable **Route Edges Around Vertices**
+  * **Listing Fields**
+    * **Cursor Text Highlights**
+      * Change **Mouse Button To Activate** to _LEFT_ 
+    * **Function Signature Field**
+      * Enable **Display Namespace**
+    * **Operands Field** 
+      * Disable **Markup Register Variable References**

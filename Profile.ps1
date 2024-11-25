@@ -56,6 +56,7 @@ Uninstall-Packages @(
     "MSIX\microsoft.windowscommunicationsapps_16005.11629.20316.0_x64__8wekyb3d8bbwe"
     "MSIX\Microsoft.People_10.1902.633.0_x64__8wekyb3d8bbwe"
     "MSIX\Microsoft.OutlookForWindows_1.2024.1023.300_x64__8wekyb3d8bbwe"
+    "MSIX\Microsoft.YourPhone_1.24102.96.0_x64__8wekyb3d8bbwe"
 )
 
 Install-Packages @(
