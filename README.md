@@ -96,6 +96,35 @@ go install golang.org/x/tools/gopls@latest
 go install github.com/nametake/golangci-lint-langserver@latest
 ```
 
+### WSL2 Debian + Nix Setup
+Install Debian WSL2:
+```pwsh
+wsl --install -d Debian
+```
+Once inside the Debian WSL2 instance, install the following packages:
+* `curl`
+* `git`
+* `openssh-client`
+* `python3`
+
+At this point, we are ready to grab [andermatt64/dotfiles](https://github.com/andermatt64/dotfiles) and setup the development environment. Once installed, add `commandline` key at the location specified below in Windows Terminal Settings JSON file: 
+```json
+{
+  "defaultProfile": "{<GUID>}",
+
+  "profiles": {
+    "list": [
+      {
+        "commandline": "wsl -d Debian --cd <HOME_DIR> -- <HOME_DIR>/.nix-profile/bin/fish",
+        "guid": "{<GUID>}",
+        "hidden": false,
+        "name": "Debian"
+      }
+    ]
+  }
+}
+```
+
 ### Ghidra Environment Setup
 In the **Function Graph** window, click **Edit Code Layout** button. In the opened dialog, click the **Instruction/Data** tab and resize the bars to make sure no text is hidden.
 
