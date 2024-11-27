@@ -48,7 +48,7 @@ Unfortunately, not all steps in this procedure are automatable via PowerShell. T
 | _Font Family_  | JetBrainsMono Nerd Font Mono |
 | _Font Size_    |                            9 |
 | _Opacity_      |                           90 |
-| _Padding_      |                            8 |
+| _Padding_      |                            3 |
 
 **Preferred Color Scheme**
 [_Spring by Gogh_](https://gogh-co.github.io/Gogh)
