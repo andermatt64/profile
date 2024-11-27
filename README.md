@@ -102,6 +102,7 @@ Install Debian WSL2:
 wsl --install -d Debian
 ```
 Once inside the Debian WSL2 instance, install the following packages:
+* `build-essential`
 * `curl`
 * `git`
 * `openssh-client`
