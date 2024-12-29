@@ -62,7 +62,7 @@ Uninstall-Packages @(
 
 Install-Packages @(
     "Helix.Helix"
-    "Golang.Go"
+    "GoLang.Go"
     "Amazon.Corretto.21.JDK"
     "Rustlang.Rustup"
     "zig.zig"
