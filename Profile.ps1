@@ -1,7 +1,16 @@
 function Install-PowerShellProfile {
     $cwd = Get-Location
+    $sourcePath = "$cwd\Terminal\Microsoft.PowerShell_profile.ps1"
+    
+    if (Test-Path -Path "$profile" -PathType Leaf) {
+        Write-Host "Found existing PowerShell profile hardlink and remvoing: $profile" -ForegroundColor Yellow
+        Remove-Item "$profile" | Out-Null
+    }
+
+    Write-Host "Creating PowerShell profile hardlink at $profile from $sourcePath" -ForegroundColor Cyan
     New-Item -ItemType File -Path "$profile" -Force | Out-Null
-    Copy-Item -Path "$cwd\Terminal\Microsoft.PowerShell_profile.ps1" -Destination "$profile"
+    Remove-Item "$profile" | Out-Null
+    New-Item -ItemType HardLink -Target "$sourcePath" -Path "$profile" | Out-Null
 }
 
 function Install-Packages {
@@ -12,6 +21,8 @@ function Install-Packages {
 
     $totalPackages = $packageList.Length
     $completedInstalls = 0
+
+    Write-Host "Installing required packages" -ForegroundColor Cyan
     
     foreach ($pkgName in $packageList) {
         Write-Progress -Activity "WinGet Package Installation" -Status "Installing $pkgName" -PercentComplete ($completedInstalls * 100 / $totalPackages)
@@ -24,9 +35,17 @@ function Install-Packages {
 function Install-HelixConfiguration {
     $cwd = Get-Location
     $helixConfPath = "$env:AppData\helix\config.toml"
+    $sourcePath = "$cwd\Helix\config.toml"
     
+    if (Test-Path -Path "$helixConfPath" -PathType Leaf) {
+        Write-Host "Found existing Helix configuration hardlink and removing: $helixConfPath" -ForegroundColor Yellow
+        Remove-Item "$helixConfPath" | Out-Null
+    }
+
+    Write-Host "Creating Helix configuration hardlink at $helixConfPath from $sourcePath" -ForegroundColor Cyan
     New-Item -ItemType File -Path "$helixConfPath" -Force | Out-Null
-    Copy-Item -Path "$cwd\Helix\config.toml" -Destination "$helixConfPath"
+    Remove-Item "$helixConfPath" | Out-Null
+    New-Item -ItemType HardLink -Target "$sourcePath" -Path "$helixConfPath" | Out-Null
 }
 
 function Uninstall-Packages {
@@ -37,6 +56,8 @@ function Uninstall-Packages {
 
     $totalPackages = $packageList.Length
     $completedInstalls = 0
+
+    Write-Host "Uninstalling unnecessary packages" -ForegroundColor Cyan
     
     foreach ($pkgName in $packageList) {
         Write-Progress -Activity "WinGet Package Uninstallation" -Status "Uninstalling $pkgName" -PercentComplete ($completedInstalls * 100 / $totalPackages)
